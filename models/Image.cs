@@ -12,7 +12,7 @@ class Image
     private Vector<byte> imageData;
 
 
-    public Image(string? handle)
+    public Image(string handle)
     {
         imageHandle = handle;
         byte[] data;

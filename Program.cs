@@ -1,5 +1,9 @@
 ﻿using ImageRecognition.models;
 
+var set = new ImageSet("data/");
+
+
+
 var temp = new Image("data/text.txt");
 
 temp.TestDisplayData();
