@@ -1,14 +1,11 @@
-using System.Text;
 using System.Numerics;
-
-
 
 namespace ImageRecognition.models;
 
 class Image
 {
     private Guid id = Guid.NewGuid();
-    private string? imageHandle;
+    private string imageHandle;
     private Vector<byte> imageData;
 
 
@@ -45,12 +42,26 @@ class Image
         {
             Console.WriteLine(ioEx.Message);
         }
-
     }
-
 
     public void TestDisplayData()
     {
         Console.WriteLine(imageData);
+    }
+
+    public void ExportData()
+    {
+        try
+        {
+            using (var fsOut = new FileStream(imageHandle, FileMode.CreateNew, FileAccess.Write))
+            {
+
+            }
+
+        }
+        catch (Exception Ex)
+        {
+            Console.WriteLine(Ex.Message);
+        }
     }
 }
